@@ -1,7 +1,7 @@
 # Loan-Approval-Prediction-Project
 ### Project Overview
 
-A Machine Learning project to automate loan eligibility based on customer details like credit history, income, and education using a Random Forest Classifier.
+A Machine Learning project to automate loan eligibility based on customer details like credit history, income, education etc using a Random Forest Classifier.
 
 ### Data Overview
 The data contains 381 records and 13 features
@@ -19,6 +19,12 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
 
 2. Feature Engineering: I dropped the Loan_ID as it was a non-predictive identifier.
 3. Encoding: Used Manual Encoding for ordinal/binary data(eg. Gender,Married,Dependents,Education,Self_Employed and Loan_Status) and One-Hot Encoding for Property_Area to avoid artificial ordering.
+4. From the EDA, I observed that:
+   a. Majority of applicants are graduates.
+   b. Applicants with a credit history of 1 have significantly higher loan approval rates. This suggests Credit_History is a strong predictor
+   c. Approved applicants tend to have slightly higher median income
+   d. Credit_History shows the strongest correlation with Loan_Status among numerical variables.
+   e. From the exploratory analysis, Credit_History emerged as the strongest predictor of loan approval. Income and LoanAmount showed skewed distributions with outliers. Missing values were  The dataset shows slight class imbalance with more approved loans than rejected ones.
 
 ### Modeling and Performance
 <img width="483" height="275" alt="image" src="https://github.com/user-attachments/assets/27edcd4b-aae1-45a2-b2d9-22f55bebe59b" />
