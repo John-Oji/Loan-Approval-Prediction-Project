@@ -1,4 +1,4 @@
-# Loan-Approval-Prediction-Project
+# Loan-Approval-Prediction
 ### Project Overview
 
 A Machine Learning project to automate loan eligibility based on customer details like credit history, income, education etc using a Random Forest Classifier.
@@ -11,7 +11,10 @@ Numerical features: ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Ter
 
 Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Property_Area
 
+
+
 ### 📂 Dataset Access
+
 👉 [Download the dataset from kaggle](https://www.kaggle.com/datasets/bhavikjikadara/loan-status-prediction)
 
 ### Data Preprocessing & EDA
@@ -20,24 +23,48 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
 2. Feature Engineering: I dropped the Loan_ID as it was a non-predictive identifier.
 3. Encoding: Used Manual Encoding for ordinal/binary data(eg. Gender,Married,Dependents,Education,Self_Employed and Loan_Status) and One-Hot Encoding for Property_Area to avoid artificial ordering.
 4. From the EDA, I observed that:
+   
    a. Majority of applicants are graduates.
-   b. Applicants with a credit history of 1 have significantly higher loan approval rates. This suggests Credit_History is a strong predictor
+   
+   b. Applicants with a credit history of 1 have significantly higher loan approval rates. (This suggests Credit_History is a strong predictor)
+   
    c. Approved applicants tend to have slightly higher median income
+   
    d. Credit_History shows the strongest correlation with Loan_Status among numerical variables.
-   e. From the exploratory analysis, Credit_History emerged as the strongest predictor of loan approval. Income and LoanAmount showed skewed distributions with outliers. Missing values were  The dataset shows slight class imbalance with more approved loans than rejected ones.
+   
+   e. From the exploratory analysis, Credit_History emerged as the strongest predictor of loan approval. Income and Loan_Amount showed skewed distributions with outliers.
+   The dataset shows slight class imbalance with more approved loans than rejected ones.
+
+
+
+
+   <img width="563" height="427" alt="image" src="https://github.com/user-attachments/assets/1a231d7a-60e1-4084-838f-3cc1a951ff4b"/>
+   <img width="592" height="418" alt="image" src="https://github.com/user-attachments/assets/c0419162-f4e6-40d8-8a12-b2756e4d60fe" />
+
+
+   <img width="1040" height="737" alt="image" src="https://github.com/user-attachments/assets/e3f0dcc0-12ae-4db6-8f72-c1b392ecc46e" />
+
+   <img width="1036" height="448" alt="image" src="https://github.com/user-attachments/assets/b24ecdac-91cb-46bc-9a4b-286ad3abbe31" />
+
+   <img width="931" height="756" alt="image" src="https://github.com/user-attachments/assets/a215bcf3-c8f2-4aa1-b2a5-0e4c2dba72ff" />
+
 
 ### Modeling and Performance
-<img width="483" height="275" alt="image" src="https://github.com/user-attachments/assets/27edcd4b-aae1-45a2-b2d9-22f55bebe59b" />
 
-I selected the Random Forest Classifier as the final model due to its high accuracy and robustness
+##### Model Evaluation Results: Below is the visualization of my model performance . I have selected Random Forest as the best model based on its superior accuracy and reliable cross-validation score. Cross-validation (CV) was applied to confirm that the model performs well on new, unseen data rather than simply memorizing patterns from the training dataset.
 
-### Prediction System
+<img width="971" height="338" alt="image" src="https://github.com/user-attachments/assets/df74b7e4-136c-4b40-a7d8-705b1e69c9f4" />
+
+
+
+
+
 
 ## Prediction System
 
 loaded_model = joblib.load('loan_status_predictor.pkl')
 
-# Create the sample data with the correct feature names
+##### Create the sample data with the correct feature names
 
 ``` Python
 sample_data = pd.DataFrame({
@@ -68,11 +95,11 @@ Prediction Result: Loan Approved
 Pipelines: I used Scikit-Learn Pipeline and StandardScaler so as to prevent data leakage.
 
 
-Hyperparameter Tuning: I used RandomizedSearchCV to optimize the final model.
 
 
 
 ### Conclusion & Insights
+
 
 The goal of this project was to build a robust predictive model to automate the loan approval process. Through rigorous data preprocessing and model selection, I achieved the following:
 
