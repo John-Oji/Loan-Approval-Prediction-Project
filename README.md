@@ -13,22 +13,22 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
 
 
 
-### 📂 Dataset Access
+## 📂 Dataset Access
 
-👉 [Download the dataset from kaggle](https://www.kaggle.com/datasets/bhavikjikadara/loan-status-prediction)
+👉 [Download the dataset here from kaggle](https://www.kaggle.com/datasets/bhavikjikadara/loan-status-prediction)
 
 ### Data Preprocessing & EDA
 1. Handling Missing Values: Missing values in the dataset were handled using mode imputation. For categorical columns like Gender, Self_Employed, and Dependents, the most frequent category was used to fill missing entries. Similarly, for numerical columns such as Loan_Amount_Term and Credit_History, missing values were replaced with the most frequently occurring value.
 
 2. Feature Engineering: I dropped the Loan_ID as it was a non-predictive identifier.
-3. Encoding: Used Manual Encoding for ordinal/binary data(eg. Gender,Married,Dependents,Education,Self_Employed and Loan_Status) and One-Hot Encoding for Property_Area to avoid artificial ordering.
+3. Encoding: I used Manual Encoding for ordinal/binary data(eg. Gender, Married, Dependents, Education, Self_Employed and Loan_Status) and One-Hot Encoding for Property_Area to avoid artificial ordering.
 4. From the EDA, I observed that:
    
    a. Majority of applicants are graduates.
    
    b. Applicants with a credit history of 1 have significantly higher loan approval rates. (This suggests Credit_History is a strong predictor)
    
-   c. Approved applicants tend to have slightly higher median income
+   c. Approved applicants tend to have slightly higher median income.
    
    d. Credit_History shows the strongest correlation with Loan_Status among numerical variables.
    
@@ -49,9 +49,11 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
    <img width="931" height="756" alt="image" src="https://github.com/user-attachments/assets/a215bcf3-c8f2-4aa1-b2a5-0e4c2dba72ff" />
 
 
-### Modeling and Performance
+## Model and Performance
 
-##### Model Evaluation Results: Below is the visualization of my model performance . I have selected Random Forest as the best model based on its superior accuracy and reliable cross-validation score. Cross-validation (CV) was applied to confirm that the model performs well on new, unseen data rather than simply memorizing patterns from the training dataset.
+### Model Evaluation Results: 
+
+Below is the visualization of my model performance . I selected Random Forest as the best model based on its superior accuracy and reliable cross-validation score. Cross-validation (CV) was applied to confirm that the model performs well on new, unseen data rather than simply memorizing patterns from the training dataset.
 
 <img width="971" height="338" alt="image" src="https://github.com/user-attachments/assets/df74b7e4-136c-4b40-a7d8-705b1e69c9f4" />
 
@@ -104,13 +106,13 @@ Pipelines: I used Scikit-Learn Pipeline and StandardScaler so as to prevent data
 The goal of this project was to build a robust predictive model to automate the loan approval process. Through rigorous data preprocessing and model selection, I achieved the following:
 
 
-Primary Predictor: Analysis showed that Credit History is the most significant factor in determining loan eligibility.
+Analysis showed that Credit History is the most significant factor in determining loan eligibility(Primary Predictor).
 
 
-Model Performance: The Random Forest Classifier outperformed other models with an accuracy of 87% and a stable cross-validation score of 83%.
+The model "Random Forest Classifier" outperformed other models with an accuracy of 87% and a stable cross-validation score of 83%.
 
 
-Scalability: By implementing Scikit-Learn Pipelines, the project is designed for easy scaling—allowing for seamless integration of new data preprocessing steps or different scaling techniques without code duplication .
+By implementing Scikit-Learn Pipelines, the project is designed for easy scaling, allowing for seamless integration of new data preprocessing steps or different scaling techniques without code duplication .
 
 
-Business Impact: This tool can significantly reduce the manual workload for credit officers by providing an instant, data-driven "pre-approval" status
+### Business Impact: This tool can significantly reduce the manual workload for credit officers by providing an instant, data-driven "pre-approval" status.
