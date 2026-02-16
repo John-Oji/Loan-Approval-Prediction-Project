@@ -1,7 +1,8 @@
 # Loan-Approval-Prediction
 ### Project Overview
 
-A Machine Learning project to automate loan eligibility based on customer details like credit history, income, education etc using a Random Forest Classifier.
+A Machine Learning project to automate loan eligibility based on customer details like credit history, income, education etc using a Random Forest Classifier. 
+The goal is to build a Machine Learning model that can predict whether a loan application will be approved or rejected.
 
 ### Data Overview
 The data contains 381 records and 13 features
@@ -36,17 +37,9 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
    The dataset shows slight class imbalance with more approved loans than rejected ones.
 
 
+   <img width="1430" height="571" alt="s1" src="https://github.com/user-attachments/assets/95b9e696-399c-4072-902a-00bf70ddc70e" />
 
 
-   <img width="563" height="427" alt="image" src="https://github.com/user-attachments/assets/1a231d7a-60e1-4084-838f-3cc1a951ff4b"/>
-   <img width="592" height="418" alt="image" src="https://github.com/user-attachments/assets/c0419162-f4e6-40d8-8a12-b2756e4d60fe" />
-
-
-   <img width="1040" height="737" alt="image" src="https://github.com/user-attachments/assets/e3f0dcc0-12ae-4db6-8f72-c1b392ecc46e" />
-
-   <img width="1036" height="448" alt="image" src="https://github.com/user-attachments/assets/b24ecdac-91cb-46bc-9a4b-286ad3abbe31" />
-
-   <img width="931" height="756" alt="image" src="https://github.com/user-attachments/assets/a215bcf3-c8f2-4aa1-b2a5-0e4c2dba72ff" />
 
 
 ## Model and Performance
