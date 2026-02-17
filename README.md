@@ -32,12 +32,28 @@ Categorical input features: Gender,Married,Dependents,Education,Self_Employed,Pr
    c. Approved applicants tend to have slightly higher median income.
    
    d. Credit_History shows the strongest correlation with Loan_Status among numerical variables.
+
+   e. Missing values were identified in Gender (5), Dependents (8), Self_Employed (21), Loan_Amount_Term (11), and Credit_History (30).
+      Mode imputation was applied to these columns. For categorical features, mode preserves the most frequent category.For Loan_Amount_Term, a discrete duration variable with a dominant           value, mode imputation ensured realistic replacement without altering distribution patterns.
    
-   e. From the exploratory analysis, Credit_History emerged as the strongest predictor of loan approval. Income and Loan_Amount showed skewed distributions with outliers.
+   f. From the exploratory analysis, Credit_History emerged as the strongest predictor of loan approval. Income and Loan_Amount showed skewed distributions with outliers.
    The dataset shows slight class imbalance with more approved loans than rejected ones.
 
 
    <img width="1430" height="571" alt="s1" src="https://github.com/user-attachments/assets/95b9e696-399c-4072-902a-00bf70ddc70e" />
+
+   <img width="1360" height="573" alt="image" src="https://github.com/user-attachments/assets/d48ada27-d933-47da-bd1a-5b40b90e03bd" />
+
+   <img width="1046" height="738" alt="image" src="https://github.com/user-attachments/assets/054ae5f2-9f1a-4fce-9b5b-aee6e3042d29" />
+
+   <img width="1038" height="453" alt="image" src="https://github.com/user-attachments/assets/3467c24c-b488-4331-a101-43f6d635dd36" />
+
+   <img width="1042" height="765" alt="image" src="https://github.com/user-attachments/assets/8dc21616-c681-47bb-b469-bb2b20cf158d" />
+
+
+
+
+   
 
 
 
